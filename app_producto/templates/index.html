@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web</title>
+    <!-- Enlace a Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .navbar {
+            background-color: #6a0572; /* Un morado atractivo */
+        }
+        .navbar-brand, .nav-link {
+            color: #f7f7f7 !important; /* Texto blanco para contrastar */
+        }
+        .nav-link:hover {
+            color: #ffd700 !important; /* Un dorado al pasar el ratón */
+        }
+        .footer {
+            background-color: #343a40; /* Un gris oscuro para el pie de página */
+            color: #f7f7f7;
+            padding: 20px 0;
+            margin-top: auto; /* Empuja el pie de página hacia abajo */
+        }
+        .content {
+            flex: 1; /* Permite que el contenido ocupe el espacio restante */
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Mi Empresa</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#productos">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#empleados">Empleados</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container content">
+        <h1 class="my-4">Bienvenido a Nuestra Página Nicolas Rios</h1>
+        <p>Este es el contenido principal de tu página. Puedes añadir aquí información sobre tu empresa, servicios, etc.</p>
+
+        <section id="productos" class="my-5">
+            <h2>Nuestros Productos</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Producto 1</h5>
+                            <p class="card-text">Descripción breve del Producto 1.</p>
+                            <a href="#" class="btn btn-primary" style="background-color: #6a0572; border-color: #6a0572;">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Producto 2</h5>
+                            <p class="card-text">Descripción breve del Producto 2.</p>
+                            <a href="#" class="btn btn-primary" style="background-color: #6a0572; border-color: #6a0572;">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Producto 3</h5>
+                            <p class="card-text">Descripción breve del Producto 3.</p>
+                            <a href="#" class="btn btn-primary" style="background-color: #6a0572; border-color: #6a0572;">Ver Detalles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="empleados" class="my-5">
+            <h2>Nuestro Equipo de Empleados</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Juan Pérez</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Gerente de Ventas</h6>
+                            <p class="card-text">Juan tiene más de 10 años de experiencia en ventas y liderazgo de equipos.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">María García</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">Desarrolladora Senior</h6>
+                            <p class="card-text">María es experta en desarrollo web y gestión de proyectos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer text-center">
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Mi Empresa. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Enlace a Bootstrap JS (Popper.js y Bootstrap JS) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Script para actualizar el año en el pie de página
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
